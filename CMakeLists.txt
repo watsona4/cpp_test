@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.8)
+project(JenkinsExample)
+enable_testing()
+add_executable(main main.cpp)
+install(TARGETS main DESTINATION bin)
+add_test(test1 main)
+add_test(test2 main)
+set_tests_properties(test2 PROPERTIES WILL_FAIL ON)
